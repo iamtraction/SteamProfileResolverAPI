@@ -4,6 +4,8 @@
   "description": "An API to resolve the Steam profile from a Vanity URL.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/k3rn31p4nic/SteamProfileResolverAPI/issues"
   },
-  "homepage": "https://github.com/k3rn31p4nic/SteamProfileResolverAPI#readme"
+  "homepage": "https://github.com/k3rn31p4nic/SteamProfileResolverAPI#readme",
+  "dependencies": {
+    "@types/node": "^10.7.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
 }
