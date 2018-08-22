@@ -5,6 +5,7 @@ import * as express from "express";
 import * as logger from "morgan";
 
 import * as indexRoute from "./routes/index";
+import * as profileRoute from "./routes/profile";
 
 /**
  * The server.
@@ -74,9 +75,11 @@ class Server {
 
     // Create routes
     const index: indexRoute.Index = new indexRoute.Index();
+    const profile: profileRoute.Profile = new profileRoute.Profile();
 
     // Home page
     router.get("/", index.main.bind(index.main));
+    router.get("/profile/:vanityname", profile.main.bind(profile.main));
 
     // Use router middleware
     this.app.use(router);
