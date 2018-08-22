@@ -14,7 +14,7 @@ const parseXMLString = promisify(xml2js.parseString) as (
  * @param {string} xml The XML string
  * @returns {object} The parsed XML as JSON
  */
-export = (xml: string) => {
+export default (xml: string) => {
   return new Promise<object>(async (resolve, reject) => {
     try {
       let parsedObject: object = await parseXMLString(xml, {

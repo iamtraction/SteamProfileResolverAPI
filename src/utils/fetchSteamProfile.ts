@@ -8,7 +8,7 @@ import * as request from "request-promise-native";
  * @param {string} vanityName The vanity name of the user
  * @returns {string} The user's profile in XML
  */
-export = (vanityName: string) => {
+export default (vanityName: string) => {
   return new Promise<string>(async (resolve, reject) => {
     try {
       let url = `https://steamcommunity.com/id/${vanityName}`;
