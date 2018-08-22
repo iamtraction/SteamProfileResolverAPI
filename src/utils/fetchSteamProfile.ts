@@ -3,7 +3,7 @@ import * as request from "request-promise-native";
 /**
  * Fetches a user profile from Steam and then returns the XML.
  * @module fetchSteamProfile
- * @param {string} vanityName - The vanity name of the user
+ * @param {string} vanityName The vanity name of the user
  * @returns {string} The user's profile in XML
  */
 export = (vanityName: string) => {
@@ -17,7 +17,7 @@ export = (vanityName: string) => {
       };
       let response = await request.get(url, options);
 
-      resolve(response);   
+      resolve(response);
     }
     catch (error) {
       reject(error);
