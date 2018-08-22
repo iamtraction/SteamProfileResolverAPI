@@ -1,3 +1,5 @@
+"use strict";
+
 import * as request from "request-promise-native";
 
 /**

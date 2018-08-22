@@ -1,3 +1,5 @@
+"use strict";
+
 import * as xml2js from "xml2js";
 import { promisify } from "util";
 
