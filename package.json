@@ -2,7 +2,7 @@
   "name": "steam-profile-resolver-api",
   "version": "1.0.0",
   "description": "An API to resolve the Steam profile from a Vanity URL.",
-  "main": "index.js",
+  "main": "./bin/www",
   "scripts": {
     "build": "tsc",
     "start": "node .",
