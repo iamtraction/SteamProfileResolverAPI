@@ -2,6 +2,7 @@
 
 import * as bodyParser from "body-parser";
 import * as express from "express";
+import * as logger from "morgan";
 
 import * as indexRoute from "./routes/index";
 
@@ -49,6 +50,9 @@ class Server {
    * @return void
    */
   private config() {
+    // Use logger for server side logging
+    this.app.use(logger("dev"));
+
     // Mount json form parser
     this.app.use(bodyParser.json());
 
