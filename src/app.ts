@@ -6,6 +6,7 @@ import * as logger from "morgan";
 
 import * as indexRoute from "./routes/index";
 import * as profileRoute from "./routes/profile";
+import * as resolverRoute from "./routes/resolver";
 
 /**
  * The server.
@@ -75,10 +76,12 @@ class Server {
 
     // Create routes
     const index: indexRoute.Index = new indexRoute.Index();
+    const resolver: resolverRoute.Resolver = new resolverRoute.Resolver();
     const profile: profileRoute.Profile = new profileRoute.Profile();
 
     // Home page
     router.get("/", index.main.bind(index.main));
+    router.get("/api/:vanityname", resolver.main.bind(resolver.main));
     router.get("/profile/:vanityname", profile.main.bind(profile.main));
 
     // Use router middleware
